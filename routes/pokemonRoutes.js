@@ -3,7 +3,7 @@ import express from "express";
 export default function setupPokemonRouter(db) {
     const router = express.Router();
 
-    //GET all route
+    //GET all pokemon route
     router.get("/", function(_req, res) {
         res.status(200).json({
             success: true,
@@ -11,7 +11,7 @@ export default function setupPokemonRouter(db) {
         });
     });
 
-    //GET one route
+    //GET one pokemon route
     router.get("/:pokemon", function(req, res) {
         const name = req.params.pokemon;
 

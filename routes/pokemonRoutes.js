@@ -26,7 +26,7 @@ export default function setupPokemonRouter(db) {
     //POST new pokemon
     router.post("/", function(req, res) {
         db.data.pokemon.push({
-            name: req.body.pokemon
+            name: req.body.name
         });
 
         db.write();
